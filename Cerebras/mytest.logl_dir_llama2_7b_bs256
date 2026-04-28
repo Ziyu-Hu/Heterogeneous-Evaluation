@@ -1,0 +1,14 @@
+usage: cszoo fit [-h] [--target_device {CSX,CPU,GPU}] [-o MODEL_DIR]
+                 [--checkpoint_path CHECKPOINT_PATH]
+                 [--load_checkpoint_states LOAD_CHECKPOINT_STATES]
+                 [--logging LOGGING] [--compile_only] [--validate_only]
+                 [--job_labels JOB_LABELS [JOB_LABELS ...]]
+                 [--job_priority {p1,p2,p3}]
+                 [--mount_dirs MOUNT_DIRS [MOUNT_DIRS ...]]
+                 [--python_paths PYTHON_PATHS [PYTHON_PATHS ...]]
+                 [--credentials_path CREDENTIALS_PATH]
+                 [--mgmt_address MGMT_ADDRESS] [--disable_version_check]
+                 [--num_csx NUM_CSX] [--debug_args [DEBUG_ARGS ...]]
+                 [--debug_args_path DEBUG_ARGS_PATH] [--ini [INI ...]]
+                 params
+cszoo fit: error: unrecognized arguments: fit configs/params_llama2_13b.yaml

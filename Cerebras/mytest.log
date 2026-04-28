@@ -1,0 +1,81 @@
+/home/ziyu/R_2.6.0/venv_cerebras_pt/lib64/python3.11/site-packages/pydantic/_internal/_generate_schema.py:404: UserWarning: [<class 'int'>, <class 'int'>] is not a Python type (it may be an instance of an object), Pydantic will allow any object with no validation since we cannot even enforce that the input is an instance of the given type. To get rid of this error wrap the type with `pydantic.SkipValidation`.
+  warn(
+2026-02-13 03:46:22,588 INFO:   Current Working Directory: /home/ziyu/R_2.6.0/modelzoo/src/cerebras/modelzoo/models/nlp/llama
+2026-02-13 03:46:22,588 INFO:   Running command: /home/ziyu/R_2.6.0/venv_cerebras_pt/bin/cszoo fit configs/params_llama2_7b.yaml --job_labels name=llama2_7b --model_dir model_dir_llama2_7b
+2026-02-13 03:46:24,721 INFO:   Appliance client semantic version: 1.1.0, cluster server semantic version: 1.13.0, job operator semantic version: 1.13.0
+2026-02-13 03:46:24,724 INFO:   Successfully initialized workflow with id: wflow-e55nthyrfcpyszfazgmr4s
+2026-02-13 03:46:24,724 INFO:   Checkpoint autoloading is enabled. Looking for latest checkpoint in "model_dir_llama2_7b" directory with the following naming convention: `checkpoint_(step)(_timestamp)?.mdl`.
+2026-02-13 03:46:24,728 INFO:   Found latest checkpoint at "model_dir_llama2_7b/checkpoint_0.mdl".
+2026-02-13 03:46:24,728 INFO:   Loading weights from checkpoint model_dir_llama2_7b/checkpoint_0.mdl
+2026-02-13 03:46:25,351 INFO:   Model state found in checkpoint and loaded successfully.
+2026-02-13 03:46:25,368 INFO:   Dataloader state found in checkpoint and loaded successfully.
+2026-02-13 03:46:25,779 INFO:   Optimizer state found in checkpoint and loaded successfully.
+2026-02-13 03:46:25,781 INFO:   Scheduler state found in checkpoint and loaded successfully.
+2026-02-13 03:46:25,782 INFO:   Gradient scaler state found in checkpoint and loaded successfully.
+2026-02-13 03:46:25,785 INFO:   ===========================================================================
+2026-02-13 03:46:25,785 INFO:   Trainer Fit Summary
+2026-02-13 03:46:25,785 INFO:   ---------------------------------------------------------------------------
+2026-02-13 03:46:25,785 INFO:   Trainer will run 1 train loop.
+2026-02-13 03:46:25,785 INFO:   
+2026-02-13 03:46:25,785 INFO:   Train steps per train loop:
+2026-02-13 03:46:25,785 INFO:   * 1 loop of 200 steps
+2026-02-13 03:46:25,785 INFO:   for a total of 200 train steps.
+2026-02-13 03:46:25,785 INFO:   
+2026-02-13 03:46:25,785 INFO:   Checkpoints will be taken every 200 steps, for a total of 1 checkpoint.
+2026-02-13 03:46:25,785 INFO:   
+2026-02-13 03:46:25,785 INFO:   Progress will be logged every 50 steps.
+2026-02-13 03:46:25,785 INFO:   ===========================================================================
+2026-02-13 03:46:25,785 INFO:   ---------------------------------------------------------------------------
+2026-02-13 03:46:25,785 INFO:   Starting train loop 1 of 1, from global step 1 to 200 (200 steps)
+2026-02-13 03:46:25,785 INFO:   ---------------------------------------------------------------------------
+2026-02-13 03:46:26,065 INFO:   Saving checkpoint at step 0
+2026-02-13 03:46:38,899 INFO:   Saved checkpoint model_dir_llama2_7b/checkpoint_0_20260213_034626.mdl
+2026-02-13 03:46:47,700 INFO:   Compiling the model. This may take a few minutes.
+2026-02-13 03:46:47,725 INFO:   Appliance client semantic version: 1.1.0, cluster server semantic version: 1.13.0, job operator semantic version: 1.13.0
+2026-02-13 03:46:48,847 INFO:   Initiating a new image build job against the cluster server.
+2026-02-13 03:46:48,865 INFO:   Job id: imgjob-2a8fd6a0b49dc3f03ad6d50d22ebde7b, workflow id: wflow-e55nthyrfcpyszfazgmr4s, namespace: job-operator, remote log path: /n1/wsjob/workdir/job-operator/imgjob-2a8fd6a0b49dc3f03ad6d50d22ebde7b
+2026-02-13 03:46:48,892 INFO:   Appliance client semantic version: 1.1.0, cluster server semantic version: 1.13.0, job operator semantic version: 1.13.0
+2026-02-13 03:46:49,150 INFO:   Processed 1024 training sample(s) in 23.367462276 seconds.
+Traceback (most recent call last):
+  File "/home/ziyu/R_2.6.0/venv_cerebras_pt/bin/cszoo", line 7, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/ziyu/R_2.6.0/modelzoo/src/cerebras/modelzoo/cli/main.py", line 299, in main
+    ModelZooCLI()
+  File "/home/ziyu/R_2.6.0/modelzoo/src/cerebras/modelzoo/cli/main.py", line 232, in __init__
+    args.func(args)
+  File "/home/ziyu/R_2.6.0/modelzoo/src/cerebras/modelzoo/cli/main.py", line 247, in run_trainer
+    run_trainer(args.mode, params)
+  File "/home/ziyu/R_2.6.0/modelzoo/src/cerebras/modelzoo/trainer/utils.py", line 181, in run_trainer
+    run_trainer(mode, config)
+  File "/home/ziyu/R_2.6.0/modelzoo/src/cerebras/modelzoo/trainer/utils.py", line 170, in run_trainer
+    trainer.fit(train_dataloader, val_dataloader, config.fit.ckpt_path)
+  File "/home/ziyu/R_2.6.0/modelzoo/src/cerebras/modelzoo/trainer/trainer.py", line 860, in fit
+    self._run_train(train_dataloader, loop, loop_idx)
+  File "/home/ziyu/R_2.6.0/modelzoo/src/cerebras/modelzoo/trainer/trainer.py", line 901, in _run_train
+    for batch_idx, batch in enumerate(self.executor):
+  File "/home/ziyu/R_2.6.0/venv_cerebras_pt/lib64/python3.11/site-packages/cerebras/pytorch/utils/data/data_executor.py", line 266, in __iter__
+    self.backend.on_batch_end()
+  File "/home/ziyu/R_2.6.0/venv_cerebras_pt/lib64/python3.11/site-packages/cerebras/pytorch/backend/ltc_backend.py", line 937, in on_batch_end
+    self.mark_step(cerebras_pytorch_lib.MarkStepType.EXECUTION)
+  File "/home/ziyu/R_2.6.0/venv_cerebras_pt/lib64/python3.11/site-packages/cerebras/pytorch/backend/ltc_backend.py", line 851, in mark_step
+    torch._lazy.mark_step()
+  File "/home/ziyu/R_2.6.0/venv_cerebras_pt/lib64/python3.11/site-packages/torch/_lazy/__init__.py", line 18, in mark_step
+    torch._C._lazy._mark_step(device, [], wait=wait)
+  File "/home/ziyu/R_2.6.0/venv_cerebras_pt/lib64/python3.11/site-packages/cerebras/pytorch/backend/ltc_backend.py", line 482, in compile
+    self._compile_appliance.compile(
+  File "/home/ziyu/R_2.6.0/venv_cerebras_pt/lib64/python3.11/site-packages/cerebras/pytorch/core/appliance.py", line 198, in compile
+    return super().compile(compile_request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ziyu/R_2.6.0/venv_cerebras_pt/lib64/python3.11/site-packages/cerebras/appliance/appliance_manager.py", line 861, in compile
+    with self.compile_cluster() as (mgmt_client, mgmt_response):
+  File "/usr/lib64/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/ziyu/R_2.6.0/venv_cerebras_pt/lib64/python3.11/site-packages/cerebras/appliance/appliance_manager.py", line 797, in compile_cluster
+    mgmt_client.assert_compatible_cluster_software()
+  File "/home/ziyu/R_2.6.0/venv_cerebras_pt/lib64/python3.11/site-packages/cerebras/appliance/cluster/client.py", line 1510, in assert_compatible_cluster_software
+    _assert_compatible(
+  File "/home/ziyu/R_2.6.0/venv_cerebras_pt/lib64/python3.11/site-packages/cerebras/appliance/cluster/client.py", line 1508, in _assert_compatible
+    raise ApplianceVersionError(error_msg)
+cerebras.appliance.errors.ApplianceVersionError: Client software is on semantic version 1.1.0 but COMPONENT_NAME_CLUSTER_SERVER is on semantic version 1.13.0. Client software must be no more than 10 minor versions behind and no more than 5 minor versions ahead of the COMPONENT_NAME_CLUSTER_SERVER version for compatibility.
