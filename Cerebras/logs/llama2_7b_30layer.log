@@ -1,0 +1,82 @@
+/home/ziyu/R_2.6.0/venv_cerebras_pt/lib64/python3.11/site-packages/pydantic/_internal/_generate_schema.py:404: UserWarning: [<class 'int'>, <class 'int'>] is not a Python type (it may be an instance of an object), Pydantic will allow any object with no validation since we cannot even enforce that the input is an instance of the given type. To get rid of this error wrap the type with `pydantic.SkipValidation`.
+  warn(
+2025-12-16 09:22:35,711 INFO:   Current Working Directory: /home/ziyu/R_2.6.0/modelzoo/src/cerebras/modelzoo/models/nlp/llama
+2025-12-16 09:22:35,711 INFO:   Running command: /home/ziyu/R_2.6.0/venv_cerebras_pt/bin/cszoo fit /tmp/tmp.ickQ5T7EB3.yaml --job_labels name=llama2_7b_30layer --model_dir pp/model_dir_llama2_7b_30layer
+2025-12-16 09:22:37,722 INFO:   Appliance client semantic version: 1.1.0, cluster server semantic version: 1.1.2, job operator semantic version: 1.1.2
+2025-12-16 09:22:37,724 INFO:   Successfully initialized workflow with id: wflow-vsg8pberlbg4rno8s9lauy
+2025-12-16 09:22:37,724 INFO:   Checkpoint autoloading is enabled. Looking for latest checkpoint in "pp/model_dir_llama2_7b_30layer" directory with the following naming convention: `checkpoint_(step)(_timestamp)?.mdl`.
+2025-12-16 09:22:37,726 INFO:   No checkpoints were found in "pp/model_dir_llama2_7b_30layer".
+2025-12-16 09:22:37,726 INFO:   No checkpoint was provided. Using randomly initialized model parameters.
+2025-12-16 09:22:37,741 INFO:   ===========================================================================
+2025-12-16 09:22:37,741 INFO:   Trainer Fit Summary
+2025-12-16 09:22:37,741 INFO:   ---------------------------------------------------------------------------
+2025-12-16 09:22:37,741 INFO:   Trainer will run 1 train loop.
+2025-12-16 09:22:37,741 INFO:   
+2025-12-16 09:22:37,741 INFO:   Train steps per train loop:
+2025-12-16 09:22:37,741 INFO:   * 1 loop of 200 steps
+2025-12-16 09:22:37,741 INFO:   for a total of 200 train steps.
+2025-12-16 09:22:37,741 INFO:   
+2025-12-16 09:22:37,741 INFO:   Checkpoints will be taken every 200 steps, for a total of 1 checkpoint.
+2025-12-16 09:22:37,741 INFO:   
+2025-12-16 09:22:37,741 INFO:   Progress will be logged every 50 steps.
+2025-12-16 09:22:37,741 INFO:   ===========================================================================
+2025-12-16 09:22:37,741 INFO:   ---------------------------------------------------------------------------
+2025-12-16 09:22:37,741 INFO:   Starting train loop 1 of 1, from global step 1 to 200 (200 steps)
+2025-12-16 09:22:37,741 INFO:   ---------------------------------------------------------------------------
+2025-12-16 09:22:46,335 INFO:   Compiling the model. This may take a few minutes.
+2025-12-16 09:22:46,349 INFO:   Appliance client semantic version: 1.1.0, cluster server semantic version: 1.1.2, job operator semantic version: 1.1.2
+2025-12-16 09:22:47,364 INFO:   Initiating a new image build job against the cluster server.
+2025-12-16 09:22:47,375 INFO:   User sidecar image build is disabled from server. Falling back to venv mounting.
+2025-12-16 09:22:47,394 INFO:   Appliance client semantic version: 1.1.0, cluster server semantic version: 1.1.2, job operator semantic version: 1.1.2
+2025-12-16 09:22:47,397 INFO:   Initiating a new compile wsjob against the cluster server.
+2025-12-16 09:22:47,415 INFO:   Job id: wsjob-jhqyz8uysiecebuxfruzju, workflow id: wflow-vsg8pberlbg4rno8s9lauy, namespace: job-operator, remote log path: /n1/wsjob/workdir/job-operator/wsjob-jhqyz8uysiecebuxfruzju
+2025-12-16 09:23:07,416 INFO:   Poll ingress status: Waiting for all Coordinator pods to be running, current running: 0/1.
+2025-12-16 09:23:07,418 INFO:   Recording the timestamp when jobs is scheduled.
+2025-12-16 09:23:07,439 WARNING:   Event 2025-12-16 09:22:48 +0000 UTC reason=InconsistentVersion wsjob=wsjob-jhqyz8uysiecebuxfruzju message='Warning: client semantic version 1.1.0 is inconsistent with cluster server semantic version 1.1.2, there's a risk job could fail due to inconsistent setup.'
+2025-12-16 09:23:17,440 INFO:   Poll ingress status: Waiting for job ingress readiness.
+2025-12-16 09:23:37,461 INFO:   Poll ingress status: Job ingress ready, dashboard: https://grafana.anl0.cerebras.internal/d/WebHNShVz/wsjob-dashboard?orgId=1&var-wsjob=wsjob-jhqyz8uysiecebuxfruzju&from=1765876375000&to=now
+2025-12-16 09:23:37,483 INFO:   Poll ingress success: Job ingress ready, dashboard: https://grafana.anl0.cerebras.internal/d/WebHNShVz/wsjob-dashboard?orgId=1&var-wsjob=wsjob-jhqyz8uysiecebuxfruzju&from=1765876375000&to=now
+2025-12-16 09:23:44,360 INFO:   Pre-optimization transforms...
+2025-12-16 09:23:58,928 INFO:   Optimizing layouts and memory usage...
+2025-12-16 09:23:59,063 INFO:   Gradient accumulation enabled
+2025-12-16 09:23:59,073 INFO:   Gradient accumulation trying full batch size 1...
+2025-12-16 09:24:14,571 INFO:   Exploring floorplans
+2025-12-16 09:24:24,040 INFO:   Exploring data layouts
+2025-12-16 09:25:17,732 INFO:   Optimizing memory usage
+2025-12-16 09:25:31,658 INFO:   No benefit from gradient accumulation expected. Compile will proceed at original per-box batch size 1
+2025-12-16 09:25:31,736 INFO:   Post-layout optimizations for <pbox=0, vbox=0, batch=1, lanes=1>...
+2025-12-16 09:25:34,794 INFO:   Allocating buffers for <pbox=0, vbox=0, batch=1, lanes=1>...
+2025-12-16 09:25:37,238 INFO:   Code generation for <pbox=0, vbox=0, batch=1, lanes=1>...
+2025-12-16 09:25:56,298 INFO:   Compiling at original per-box batch size 1
+2025-12-16 09:25:59,973 INFO:   Compile estimated performance: 1.78 samples/sec (1.78 samples/sec/system). Estimate may vary by 10-25% from actual runtime performance.
+2025-12-16 09:26:06,059 INFO:   Compiling image...
+2025-12-16 09:26:06,655 INFO:   Compiling kernels
+2025-12-16 09:27:33,450 INFO:   Compiling final image
+2025-12-16 09:28:37,063 INFO:   Compile artifacts successfully written to remote compile directory. Compile hash is: cs_18294792894621660522
+2025-12-16 09:28:37,463 INFO:   Compile was successful!
+2025-12-16 09:28:37,463 INFO:   Programming Cerebras Wafer Scale Cluster for execution. This may take a few minutes.
+2025-12-16 09:28:39,488 INFO:   Appliance client semantic version: 1.1.0, cluster server semantic version: 1.1.2, job operator semantic version: 1.1.2
+2025-12-16 09:28:39,491 INFO:   Initiating a new execute wsjob against the cluster server.
+2025-12-16 09:28:39,521 INFO:   Job id: wsjob-nh7kh8ahpnesty4ototoxk, workflow id: wflow-vsg8pberlbg4rno8s9lauy, namespace: job-operator, remote log path: /n1/wsjob/workdir/job-operator/wsjob-nh7kh8ahpnesty4ototoxk
+2025-12-16 09:28:59,522 INFO:   Poll ingress status: Waiting for all Command pods to be running, current running: 0/1.
+2025-12-16 09:28:59,524 INFO:   Recording the timestamp when jobs is scheduled.
+2025-12-16 09:28:59,546 WARNING:   Event 2025-12-16 09:28:40 +0000 UTC reason=InconsistentVersion wsjob=wsjob-nh7kh8ahpnesty4ototoxk message='Warning: client semantic version 1.1.0 is inconsistent with cluster server semantic version 1.1.2, there's a risk job could fail due to inconsistent setup.'
+2025-12-16 09:29:09,546 INFO:   Poll ingress status: Waiting for job ingress readiness.
+2025-12-16 09:29:39,563 INFO:   Poll ingress status: Job ingress ready, dashboard: https://grafana.anl0.cerebras.internal/d/WebHNShVz/wsjob-dashboard?orgId=1&var-wsjob=wsjob-nh7kh8ahpnesty4ototoxk&from=1765876727000&to=now
+2025-12-16 09:29:39,579 INFO:   Poll ingress success: Job ingress ready, dashboard: https://grafana.anl0.cerebras.internal/d/WebHNShVz/wsjob-dashboard?orgId=1&var-wsjob=wsjob-nh7kh8ahpnesty4ototoxk&from=1765876727000&to=now
+2025-12-16 09:29:39,669 INFO:   Preparing to execute using 1 CSX
+2025-12-16 09:30:27,157 INFO:   About to send initial weights
+2025-12-16 09:30:47,676 INFO:   Finished sending initial weights
+2025-12-16 09:30:47,677 INFO:   Finalizing appliance staging for the run
+2025-12-16 09:30:47,686 INFO:   Waiting for device programming to complete
+2025-12-16 09:33:23,787 INFO:   Device programming is complete
+2025-12-16 09:33:24,718 INFO:   Using network type: ROCE
+2025-12-16 09:33:24,718 INFO:   Waiting for input workers to prime the data pipeline and begin streaming ...
+2025-12-16 09:33:24,727 INFO:   Input workers have begun streaming input data
+2025-12-16 09:33:25,871 INFO:   Appliance staging is complete
+2025-12-16 09:33:25,871 INFO:   Beginning appliance run
+2025-12-16 09:34:04,339 INFO:   | Train Device=CSX, Step=50, Loss=9.03923, Rate=1.35 samples/sec, GlobalRate=1.30 samples/sec, LoopTimeRemaining=0:01:58, TimeRemaining>0:01:58
+2025-12-16 09:34:43,346 INFO:   | Train Device=CSX, Step=100, Loss=8.40077, Rate=1.29 samples/sec, GlobalRate=1.29 samples/sec, LoopTimeRemaining=0:01:18, TimeRemaining>0:01:18
+2025-12-16 09:35:21,639 INFO:   | Train Device=CSX, Step=150, Loss=7.66356, Rate=1.40 samples/sec, GlobalRate=1.30 samples/sec, LoopTimeRemaining=0:00:38, TimeRemaining>0:00:38
+2025-12-16 09:35:59,881 INFO:   | Train Device=CSX, Step=200, Loss=8.13343, Rate=1.70 samples/sec, GlobalRate=1.30 samples/sec, LoopTimeRemaining=0:00:00, TimeRemaining>0:00:00
+2025-12-16 09:35:59,886 INFO:   Saving checkpoint at step 200
